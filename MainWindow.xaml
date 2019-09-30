@@ -1,0 +1,138 @@
+﻿<Window x:Class="SSE657_Project1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SSE657_Project1"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="3*"/>
+        </Grid.ColumnDefinitions>
+        <Grid Grid.Column="0">
+            
+            <StackPanel Orientation="Vertical">
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Text="Name:  "/>
+                    <TextBlock Text="{Binding CharacterName}"/>
+                </StackPanel>
+                <TextBlock Text=""/>
+                <TextBlock Text="Ability Scores" FontSize="14" FontWeight="Bold"/>
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Text="Strength:  "/>
+                    <TextBlock Text="{Binding AbilityScores[0]}"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Text="Dexterity:  "/>
+                    <TextBlock Text="{Binding AbilityScores[1]}"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Text="Strength:  "/>
+                    <TextBlock Text="{Binding AbilityScores[2]}"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Text="Strength:  "/>
+                    <TextBlock Text="{Binding AbilityScores[3]}"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Text="Strength:  "/>
+                    <TextBlock Text="{Binding AbilityScores[4]}"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Text="Strength:  "/>
+                    <TextBlock Text="{Binding AbilityScores[5]}"/>
+                </StackPanel>
+                <TextBlock Text=""/>
+            </StackPanel>
+        </Grid>
+        <Grid Grid.Column="1">
+            <StackPanel>
+                <TextBlock Text="Skill Bonuses" FontSize="14" FontWeight="Bold"/>
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Text="Acrobatics:  "/>
+                    <TextBlock Text="{Binding character.SkillBonuses[1]}"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Text="Animal Handling:  "/>
+                    <TextBlock Text="{Binding character.SkillBonuses[9]}"/>
+                 </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Text="Arcana:  "/>
+                    <TextBlock Text="{Binding character.SkillBonuses[4]}"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Text="Athletics:  "/>
+                    <TextBlock Text="{Binding character.SkillBonuses[0]}"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Text="Deception:  "/>
+                    <TextBlock Text="{Binding character.SkillBonuses[14]}"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Text="History:  "/>
+                    <TextBlock Text="{Binding character.SkillBonuses[5]}"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Text="Insight:  "/>
+                    <TextBlock Text="{Binding character.SkillBonuses[10]}"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Text="Intimidation:  "/>
+                    <TextBlock Text="{Binding character.SkillBonuses[15]}"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Text="Investigation:  "/>
+                    <TextBlock Text="{Binding character.SkillBonuses[6]}"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Text="Medicine:  "/>
+                    <TextBlock Text="{Binding character.SkillBonuses[11]}"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Text="Nature:  "/>
+                    <TextBlock Text="{Binding character.SkillBonuses[7]}"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Text="Perception:  "/>
+                    <TextBlock Text="{Binding character.SkillBonuses[12]}"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Text="Performance:  "/>
+                    <TextBlock Text="{Binding character.SkillBonuses[16]}"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Text="Religion:  "/>
+                    <TextBlock Text="{Binding character.SkillBonuses[8]}"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Text="Sleight of Hand:  "/>
+                    <TextBlock Text="{Binding character.SkillBonuses[2]}"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Text="Stealth:  "/>
+                    <TextBlock Text="{Binding character.SkillBonuses[3]}"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Text="Survival:  "/>
+                    <TextBlock Text="{Binding character.SkillBonuses[13]}"/>
+                </StackPanel>
+
+            </StackPanel>
+        </Grid>
+        <Grid Grid.Column="2">
+            <StackPanel Orientation="Vertical">
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Text="HP: "/>
+                    <TextBlock Text="{Binding character.HP}"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Text="Speed: "/>
+                    <TextBlock Text="{Binding character.CharacterClass.MovementSpeed}"/>
+                </StackPanel>
+            </StackPanel>
+        </Grid>
+    </Grid>
+</Window>
